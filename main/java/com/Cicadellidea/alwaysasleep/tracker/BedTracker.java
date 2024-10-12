@@ -24,7 +24,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import java.util.List;
 
 public class BedTracker {
-    @SubscribeEvent
+    @SubscribeEvent(priority = EventPriority.LOWEST)
     public void bedUsing(PlayerInteractEvent.RightClickBlock event)
     {
         var pos = event.getPos();
